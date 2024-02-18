@@ -1,4 +1,4 @@
-<h1> Praktikum 2 </h1>
+/<h1> Praktikum 2 </h1>
 
 Langkah 1
 
