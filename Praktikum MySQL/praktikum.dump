@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2024 at 04:49 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: May 11, 2024 at 06:32 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tugas`
+-- Database: `tugas_bima_mysql`
 --
 
 -- --------------------------------------------------------
@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `acara` (
-  `id_acara` int(11) NOT NULL,
+  `id_acara` int(10) NOT NULL,
   `nama_acara` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -40,8 +40,9 @@ CREATE TABLE `acara` (
 
 CREATE TABLE `kepanitiaan` (
   `id_kepanitiaan` int(11) NOT NULL,
-  `nama_kepanitiaan` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `nama_kepanitiaan` varchar(100) DEFAULT NULL,
+  `umur` int(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -54,7 +55,7 @@ CREATE TABLE `pegawai` (
   `alamat` varchar(100) DEFAULT NULL,
   `nomor_telpon` int(20) DEFAULT NULL,
   `nama_pegawai` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -64,9 +65,9 @@ CREATE TABLE `pegawai` (
 
 CREATE TABLE `sekolah` (
   `id_sekolah` int(11) NOT NULL,
-  `nama_sekolah` varchar(100) DEFAULT NULL,
-  `alamat` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `alamat` varchar(100) DEFAULT NULL,
+  `nama_sekolah` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -80,7 +81,7 @@ CREATE TABLE `siswa` (
   `nomor_telpon` int(20) DEFAULT NULL,
   `nama_siswa` varchar(100) DEFAULT NULL,
   `umur` int(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,7 @@ CREATE TABLE `siswa` (
 CREATE TABLE `tim` (
   `id_tim` int(11) NOT NULL,
   `nama_tim` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -102,7 +103,7 @@ CREATE TABLE `tim` (
 CREATE TABLE `turnamen` (
   `id_turnamen` int(11) NOT NULL,
   `nama_turnamen` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -155,12 +156,6 @@ ALTER TABLE `turnamen`
 --
 
 --
--- Constraints for table `acara`
---
-ALTER TABLE `acara`
-  ADD CONSTRAINT `acara_ibfk_1` FOREIGN KEY (`id_acara`) REFERENCES `turnamen` (`id_turnamen`);
-
---
 -- Constraints for table `kepanitiaan`
 --
 ALTER TABLE `kepanitiaan`
@@ -171,6 +166,12 @@ ALTER TABLE `kepanitiaan`
 --
 ALTER TABLE `pegawai`
   ADD CONSTRAINT `pegawai_ibfk_1` FOREIGN KEY (`id_pegawai`) REFERENCES `kepanitiaan` (`id_kepanitiaan`);
+
+--
+-- Constraints for table `sekolah`
+--
+ALTER TABLE `sekolah`
+  ADD CONSTRAINT `sekolah_ibfk_1` FOREIGN KEY (`id_sekolah`) REFERENCES `turnamen` (`id_turnamen`);
 
 --
 -- Constraints for table `siswa`
@@ -188,7 +189,7 @@ ALTER TABLE `tim`
 -- Constraints for table `turnamen`
 --
 ALTER TABLE `turnamen`
-  ADD CONSTRAINT `turnamen_ibfk_1` FOREIGN KEY (`id_turnamen`) REFERENCES `sekolah` (`id_sekolah`);
+  ADD CONSTRAINT `turnamen_ibfk_1` FOREIGN KEY (`id_turnamen`) REFERENCES `acara` (`id_acara`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
