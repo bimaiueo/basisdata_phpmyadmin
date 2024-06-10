@@ -1,21 +1,21 @@
 
 <h1>1. Ubah nama mata kuliah “Basis Data” menjadi “Basis Data Dasar”!</h1>
-<img width="954" alt="1" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/cd9c8b68-9460-4622-afe1-1d42fb78f17e">
+<img width="511" alt="1" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/74023c3b-8b13-4fa9-a8f7-e605a1328f45">
 
 
 <h1>2. Ubah semua jadwal kuliah mata kuliah “Basis Data Dasar” menjadi hari Senin di jam pelajaran ke 5 sampai dengan jam pelajaran ke 10!</h1>
-<img width="957" alt="2" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/5d9f0187-48a6-4bf2-802e-9710dcdc5e1c">
+<img width="779" alt="2" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/cd3a5bb7-58dd-4625-ac78-06de31ad9f2e">
 
 
 <h1>3. Hapus jadwal perkuliahan “Kewarganegaraan” pada tabel jadwal!</h1>
-<img width="959" alt="3" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/90a23449-0afc-4b03-bbc0-115d3b2598cb">
+<img width="500" alt="3" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/ca66036e-b47a-46fb-93da-d30d5c5afe8d">
 
 <h1>4. Tambahkan mata kuliah “Pancasila”, “Bela Negara”, “Wawasan Nusantara” pada tabel mk!</h1>
-<img width="958" alt="4" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/d4db43b0-78db-47b5-bb8d-3847c7837742">
+<img width="959" alt="4" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/a944e6b6-f717-4b91-92ff-90c2096e770f">
 
 
 <h1>5. Hapus semua isi data pada tabel mk_backup!</h1>
-<img width="959" alt="5" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/7832f30c-113c-44dc-a8e5-c01f87a11f12">
+<img width="401" alt="5" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/c8ca2a75-329e-44ee-b21d-ce7aad98a2b6">
 
 
 <h1>6. Isi data tabel mk_backup dengan isi dari tabel mk!</h1>
