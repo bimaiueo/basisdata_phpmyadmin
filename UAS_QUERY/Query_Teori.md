@@ -27,7 +27,6 @@ Selain menggunakan kategori sebuah berita juga dapat dikelompokkan berdasarkan s
 
 Untuk mempermudah interaksi antara pembaca dan penulis di sistem berita ini setiap berita yang dibuat dapat diberi komentar sebuah berita dapat dikomentari lebih dari satu kali oleh pembaca data yang dicatat pada komentar adalah komentar id komentar id ini bersifat unik kemudian isi komentar berupa text panjang maksimal 255 karakter nama pemberi komentar dan email pemberi komentar email harus dalam format email yang benar serta dicatat juga tanggal komentarnya.
 
-Screenshot (884)
 <img width="491" alt="Screenshot 2024-06-15 122959" src="https://github.com/bimaiueo/basisdata_phpmyadmin/assets/145304580/26467ec9-5edb-44a5-9c06-205c0084f32d">
 
 
